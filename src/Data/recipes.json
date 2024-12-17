@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": 1,
+    "name": "Spaghetti Bolognese",
+    "ingredients": ["spaghetti", "ground beef", "tomato sauce", "onion", "garlic"],
+    "cooking_time": 30,
+    "image": "https://via.placeholder.com/150?text=Spaghetti+Bolognese",
+    "instructions": "Cook spaghetti. In another pan, sauté onion and garlic, then add ground beef and tomato sauce. Simmer for 15 minutes and serve over spaghetti."
+  },
+  {
+    "id": 2,
+    "name": "Chicken Caesar Salad",
+    "ingredients": ["chicken breast", "romaine lettuce", "parmesan", "croutons", "caesar dressing"],
+    "cooking_time": 15,
+    "image": "https://via.placeholder.com/150?text=Chicken+Caesar+Salad",
+    "instructions": "Grill chicken breast. Chop lettuce and mix with croutons, parmesan, and dressing. Top with grilled chicken slices."
+  },
+  {
+    "id": 3,
+    "name": "Vegetable Stir Fry",
+    "ingredients": ["broccoli", "carrot", "bell pepper", "soy sauce", "ginger"],
+    "cooking_time": 20,
+    "image": "https://via.placeholder.com/150?text=Vegetable+Stir+Fry",
+    "instructions": "Chop vegetables. Stir fry in a hot pan with ginger and soy sauce for 10 minutes. Serve with rice."
+  },
+  {
+    "id": 4,
+    "name": "Pancakes",
+    "ingredients": ["flour", "milk", "egg", "sugar", "butter"],
+    "cooking_time": 20,
+    "image": "https://via.placeholder.com/150?text=Pancakes",
+    "instructions": "Mix flour, milk, egg, and sugar into a batter. Heat a pan, melt butter, and pour batter in small circles. Cook until golden on both sides."
+  },
+  {
+    "id": 5,
+    "name": "Beef Tacos",
+    "ingredients": ["tortilla", "ground beef", "cheese", "lettuce", "salsa"],
+    "cooking_time": 25,
+    "image": "https://via.placeholder.com/150?text=Beef+Tacos",
+    "instructions": "Cook ground beef with spices. Warm tortillas, add beef, and top with cheese, lettuce, and salsa."
+  }
+]
