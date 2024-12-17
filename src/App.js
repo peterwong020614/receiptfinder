@@ -8,15 +8,23 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [error, setError] = useState('');
 
   const handleSearch = () => {
-    const results = recipesData.filter((recipe) =>
+    try{const results = recipesData.filter((recipe) =>
       recipe.ingredients.some((ingredient) =>
         ingredient.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
     setFilteredRecipes(results);
-  };
+    if(results.length === 0){
+      throw new Error('No recipes found for the given ingredient.')
+    }
+    setError(null);
+  }catch (err){
+  setError('An error occured while searching:'+ err.message);
+}
+}; 
 
   const openRecipe = (recipe) => {
     setSelectedRecipe(recipe);
@@ -39,6 +47,7 @@ const App = () => {
           />
           <button onClick={handleSearch}>Search</button>
         </div>
+        {error && <p className="error-message">{error}</p>}
       </header>
 
       <main>

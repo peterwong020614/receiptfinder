@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
 const RecipeList =({recipes, onRecipeClick}) => {
+    const [expanded, setExpanded] = useState({});
+
+  const toggleShowMore = (id) => {
+    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
     return (
         <div lassName ="recipe-list">
             {recipes.length > 0 ?(
@@ -10,7 +16,11 @@ const RecipeList =({recipes, onRecipeClick}) => {
                         <h2>{recipe.name}</h2>
                         <p><strong>Ingredients:</strong> {recipe.ingredients.join(', ')}</p>
                         <p><strong>Cooking Time:</strong> {recipe.cooking_time ? `${recipe.cooking_time} mins` : 'N/A'}</p>
-                        <p><strong>Instructions:</strong> {recipe.instructions || 'No instructions available.'}</p>
+                        {expanded[recipe.id] && <p><strong>Instructions:</strong> {recipe.instructions}</p>}
+            <button onClick={() => toggleShowMore(recipe.id)}>
+              {expanded[recipe.id] ? 'Show Less' : 'Show More'}
+            </button>
+            <button onClick={() => onRecipeClick(recipe)}>View Details</button>
                     </div>
                 ))
             ):(

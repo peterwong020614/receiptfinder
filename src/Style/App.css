@@ -1,17 +1,14 @@
-
 .app {
   font-family: Arial, sans-serif;
   padding: 20px;
 }
 
-body{
-  background-color: aquamarine;
-  
-}
-
 header {
   text-align: center;
   margin-bottom: 20px;
+}
+body{
+  background-color: azure;
 }
 
 .search-bar {
@@ -29,7 +26,7 @@ header {
 }
 
 .recipe-card {
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
   max-width: 200px;
@@ -60,6 +57,7 @@ header {
   border-radius: 8px;
   max-width: 500px;
   text-align: center;
+  position: relative;
 }
 
 .close {
@@ -70,15 +68,8 @@ header {
   font-size: 20px;
 }
 
-@media only screen and (min-width:768px){
-  
-}
-
-
-@media only screen and (min-width: 480px) and (max-width: 768px ) {
-  
-}
-
-@media only screen and (max-width: 479px) {
- 
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
 }
