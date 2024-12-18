@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react';
 
 const RecipeModal = ({ recipe, onClose }) => {
-  // Close modal when Escape key is pressed
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape') 
+      {
         onClose();
       }
     };
     document.addEventListener('keydown', handleKeyDown);
 
-    return () => {
+    return () => 
+    {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
 
-  // Close modal when clicking outside the modal content
+  }, [onClose]);
+  
   const handleBackdropClick = (e) => {
     if (e.target.classList.contains('modal')) {
       onClose();

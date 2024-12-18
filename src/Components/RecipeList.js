@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 
-const RecipeList =({recipes, onRecipeClick}) => {
+const RecipeList =({recipes, onRecipeClick}) => 
+{
     const [expanded, setExpanded] = useState({});
 
-  const toggleShowMore = (id) => {
-    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+  const toggleShowMore = (id) => 
+    {
+        setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+    };
 
     return (
         <div lassName ="recipe-list">
